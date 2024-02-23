@@ -52,12 +52,7 @@ public static class Server_ASP_NET_VANL
 
     static bool IsDashApp(string ClientId) 
     {
-        // python dash app client
-        if (Regex.Match(ClientId, @"dash_mqtt_[a-zA-Z0-9]{8}").Success) {
-            return true;
-        }
-
-        return false;
+        return Regex.Match(ClientId, @"dash_mqtt_[a-zA-Z0-9]{8}").Success;
     }
 
 
